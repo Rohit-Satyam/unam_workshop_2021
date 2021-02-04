@@ -71,6 +71,6 @@ libncbi6 \
 mummer \
 liblist-moreutils-perl
 
-# Install Ki-s tool
-RUN Rscript -e "install.packages(c("BiocManager","htmlwidgets"), dependencies=TRUE)"
+# Install Ki-s tool. Use singlequotes as doublequotes gives error when specifying packages.
+RUN Rscript -e "install.packages(c('BiocManager','htmlwidgets'), dependencies=TRUE)"
 RUN pip3 install pyani && git clone https://git.renater.fr/anonscm/git/ki-s/ki-s.git
