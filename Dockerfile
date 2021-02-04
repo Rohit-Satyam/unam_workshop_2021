@@ -6,7 +6,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -yq \
-apt-utils\
+apt-utils \
 
 # gnupg requirement
 dirmngr \
