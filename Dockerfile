@@ -41,6 +41,7 @@ tk-dev \
 libffi-dev \
 liblzma-dev \
 python-openssl \
+python3-pip \
 
 # install script requirements
 sudo \
@@ -67,6 +68,9 @@ r-cran-shiny \
 blast2 \
 ncbi-blast+ \
 libncbi6 \
+mummer \
+liblist-moreutils-perl
 
 # Install Ki-s tool
+RUN Rscript -e "install.packages(c("BiocManager","htmlwidgets"), dependencies=TRUE)"
 RUN pip3 install pyani && git clone https://git.renater.fr/anonscm/git/ki-s/ki-s.git
