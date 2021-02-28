@@ -21,6 +21,8 @@ xargs -I{} -P4 grep -F {} Tenacibaculum_maritimum_ncimb_2154_gca_900119795.MARIT
 
 The general docker commands can be found [here](https://medium.com/@rohitsatyam/step-by-step-guide-to-using-docker-3f953a9127b4)
 
+Understanding the docker:Watch [here](https://youtu.be/EsLlCWHx_-k)
+
 Steps to creater a docker Image and make it importable:
 1. Make a dockerfile that will specify all the dependencies you require for your tool to run. Make sure that the directory you are building image conatins only a singlefile containing `Dockerfile` file.
 2. Once you define all the dependencies in a file, you can build it using `docker build -f ./Dockerfile -t ki-s.` command where `-f` flag is use to specify the location of Dockerfile (optional if you are already in the same directory where Dockerfile resides) and `-t` flag let's you tag your image with a name. This will check if all the dependencies are available for the OS you have asked for/ for the tool and will intall them your you.
